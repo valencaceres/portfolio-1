@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { projects } from "@/data/projects";
 import { useLanguage } from "@/context/LenguageContext";
@@ -25,7 +26,7 @@ export const Projects = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:-translate-y-1"
             >
               <div className="relative h-48">
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.translations[language].title}
                   className="w-full h-full object-cover"
